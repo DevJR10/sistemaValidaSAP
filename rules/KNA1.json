@@ -1,0 +1,16 @@
+{
+  "table": "KNA1",
+  "keyField": {
+    "ecc": "KUNNR",
+    "s4": "KUNNR"
+  },
+  "fieldMappings": {
+    "VBUND": {
+      "eccField": "VBUND",
+      "s4Field": "VBUND",
+      "map": {
+        "CS7900": "BR3100"
+      }
+    }
+  }
+}
