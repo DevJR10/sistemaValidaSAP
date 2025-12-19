@@ -1,0 +1,3 @@
+- Fazer consulta dos campos atraves de uma barra de pesquisa e retornar apenas os filtrados.
+- Validar tabelas com codigos duplicados (KNVV). Erro na hora de validar mais de um cliente por codigo e diferentes setores de atividades pro mesmo cliente.
+- 

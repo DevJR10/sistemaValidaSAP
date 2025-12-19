@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Devanagari:wght@100..900&display=swap");
+
 /* Reset básico */
 * {
   margin: 0;
@@ -66,7 +68,6 @@ p {
   height: 1px; /* invisível, só para o scroll funcionar */
 }
 
-
 /* Tabela */
 table {
   width: 100%;
@@ -83,7 +84,6 @@ th {
   white-space: nowrap;
   background-color: #d9e2f3;
 }
-
 
 /* Linhas */
 td {
@@ -129,13 +129,71 @@ button:hover {
   background-color: #0059c1;
 }
 
+/* Loader emoji girando */
+.loader {
+  display: inline-block;
+  margin-left: 8px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .diff-error {
-  background-color: #f8d7da;
+  background-color: #ff021762;
   font-weight: bold;
 }
 
 .diff-converted {
   background-color: #fff3cd;
   font-weight: bold;
+}
+
+/* Tooltip customizada */
+td[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+td[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%; /* coloca do lado direito da célula */
+  top: 50%;
+  transform: translateY(-50%); /* centraliza verticalmente */
+  margin-left: 6px; /* espaçamento da célula */
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  white-space: pre; /* mantém quebras de linha */
+  display: none;
+  z-index: 10;
+}
+/* Mostra ao passar o mouse */
+td[data-tooltip]:hover::after {
+  display: block;
+}
+
+/* Estilos por status */
+.tooltip-ok::after {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.tooltip-dexpara::after {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.tooltip-error::after {
+  background-color: #dc3545;
+  color: #fff;
 }

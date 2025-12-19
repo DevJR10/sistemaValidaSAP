@@ -11,4 +11,3 @@ initScrollSync();
 // Botão de validação
 bindValidation();
 
-// Exemplo de pesquisa: você pode chamar searchFields(['Campo1', 'Campo2']) quando quiser
