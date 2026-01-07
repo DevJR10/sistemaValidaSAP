@@ -1,4 +1,5 @@
-##Guia de Utilização: Sistema de Validação de Dados
+## Guia de Utilização: Sistema de Validação de Dados
+
 Para que o sistema funcione corretamente, é necessário seguir estas três diretrizes principais de estruturação de dados e configuração de regras.
 
 1. Requisitos das Tabelas (ECC e S4)
