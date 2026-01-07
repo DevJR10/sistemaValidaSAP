@@ -12,22 +12,20 @@ As regras de tradução (DE x PARA) são definidas em arquivos JSON localizados 
 3. Estrutura do Arquivo JSON
 Abaixo, um exemplo da estrutura correta para configurar o mapeamento:
 
-JSON
-
+```json
 {
-  "table": "NOME_TECNICO_DA_TABELA", // Ex: KNA1, KNVV
+  "table": "KNA1",
   "keyField": {
     "ecc": "KUNNR",
     "s4": "KUNNR"
   },
   "fieldMappings": {
-    "NOME_DO_CAMPO_ALVO": {
-      "eccField": "CAMPO_ORIGEM_ECC",
-      "s4Field": "CAMPO_DESTINO_S4",
+    "NOME_DO_CAMPO": {
+      "eccField": "VALOR_ORIGEM",
+      "s4Field": "VALOR_DESTINO",
       "map": {
-        "VALOR_ECC": ["VALOR_S4"] // Regra DE x PARA
+        "CS1100": ["BR0000"]
       }
     }
-    // Você pode adicionar quantos campos forem necessários seguindo o modelo acima.
   }
 }
