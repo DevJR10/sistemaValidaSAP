@@ -1,18 +1,12 @@
-// =========================
-// DADOS EXPORTADOS
-// =========================
 export let eccData = [];
 export let s4Data = [];
 export let tableName = '';
 
-// =========================
-// INIT
-// =========================
 export function initPreview() {
   const eccTable = document.getElementById('eccTable');
   const s4Table = document.getElementById('s4Table');
 
-  // 🔹 Atualiza as variáveis exportadas
+  // Atualiza as variáveis exportadas
   eccData = JSON.parse(localStorage.getItem('eccData') || '[]');
   s4Data = JSON.parse(localStorage.getItem('s4Data') || '[]');
   tableName = localStorage.getItem('tableName') || '';
@@ -22,7 +16,7 @@ export function initPreview() {
     return;
   }
 
-  // 🔹 Filtra linhas vazias
+  // Filtra linhas vazias
   eccData = filterEmptyRows(eccData);
   s4Data = filterEmptyRows(s4Data);
 
